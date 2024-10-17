@@ -1,0 +1,69 @@
+title: `AI Carz - ${carData.data.make} ${carData.data.model}`,
+description: carData.data.make,
+openGraph: {
+  title: `AI Carz - ${carData.data.make}`,
+  description: carData?.data?.model,
+  images: [
+    {
+      url: carData?.data?.carImages[0],
+      alt: "Car Image",
+    },
+  ],
+},
+twitter: {
+  cardType: 'summary_large_image',
+},
+meta: [
+  {
+    name: 'keywords',
+    content: `${carData.data.make}, ${carData.data.model}, ${carData.data.variant}, car`,
+  },
+  {
+    name: 'robots',
+    content: 'index, follow',
+  },
+  {
+    name: 'author',
+    content: 'Your Name or Company Name',
+  },
+  {
+    name: 'viewport',
+    content: 'width=device-width, initial-scale=1.0',
+  },
+  {
+    name: 'og:type',
+    content: 'website',
+  },
+  {
+    name: 'og:url',
+    content: `https://your-app-url.com/path-to-your-page/${params.ID}`,
+  },
+  {
+    name: 'og:locale',
+    content: 'en_US',
+  },
+  {
+    name: 'og:site_name',
+    content: 'AI Carz',
+  },
+  {
+    name: 'og:price:amount',
+    content: carData?.data?.price || '',
+  },
+  {
+    name: 'og:price:currency',
+    content: currencyCode || '',
+  },
+  {
+    name: 'og:availability',
+    content: 'instock',
+  },
+  {
+    name: 'og:brand',
+    content: 'Car Brand',
+  },
+  {
+    name: 'og:condition',
+    content: 'new', // or 'used' based on your data
+  },
+],
